@@ -27,40 +27,46 @@
 //     },
 // });
 
-//App.js
+//App.js 
 import React from 'react';
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, ScrollView, ImageBackground } from 'react-native';
-
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  ScrollView,
+  ImageBackground,
+} from 'react-native';
 
 export default class App extends React.Component {
-
   render() {
     return (
       <View style={styles.container}>
         <ImageBackground
+          // eslint-disable-next-line react-native/no-inline-styles
           style={{width: '100%', height: '100%'}}
           source={require('./images/background.png')}>
-        <View style={styles.settingView}>
-          <TouchableOpacity>
-            <Image source={require('./icon/setting.png')} />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.ddayView}>
-          <Text style={styles.titleText}>수능까지</Text>
-          <Text style={styles.ddayText}>D-123</Text>
-          <Text style={styles.dateText}>2021년 12월 3일</Text>
-        </View>
-        <View style={styles.chatView}>
-          <ScrollView style={styles.chatScrollView}>
-
-          </ScrollView>
-          <View style={styles.chatControl}>
-            <TextInput style={styles.ChatInput} />
-            <TouchableOpacity style={styles.sendButton}>
-              <Text>전송</Text>
+          <View style={styles.settingView}>
+            <TouchableOpacity>
+              <Image source={require('./icon/setting.png')} />
             </TouchableOpacity>
           </View>
-        </View>
+          <View style={styles.ddayView}>
+            <Text style={styles.titleText}>수능까지</Text>
+            <Text style={styles.ddayText}>D-123</Text>
+            <Text style={styles.dateText}>2021년 12월 3일</Text>
+          </View>
+          <View style={styles.chatView}>
+            <ScrollView style={styles.chatScrollView}></ScrollView>
+            <View style={styles.chatControl}>
+              <TextInput style={styles.ChatInput} />
+              <TouchableOpacity style={styles.sendButton}>
+                <Text>전송</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </ImageBackground>
       </View>
     );
